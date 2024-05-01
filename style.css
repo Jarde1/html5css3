@@ -10,6 +10,13 @@
         ---------------------------------------
 */
 
+/* Técnica para organizar o renderizamento nos navegadores */
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
 /*  Smartfone Portrait -------------------- */
 @media (min-width: 540px){
     body{
