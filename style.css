@@ -1,0 +1,14 @@
+
+/*
+    Folha de estilo do site one page HTML5 e CSS3
+    @author Jardel Ferreira
+    sintaxe css3:
+        selotor{
+            propriedade1: valor;
+            propriedade2: valor;
+        }
+*/
+body{
+    background-color: #ff0000;
+}
+
