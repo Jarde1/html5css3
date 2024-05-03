@@ -7,9 +7,8 @@
             propriedade1: valor;
             propriedade2: valor;
         }
-        ---------------------------------------
 */
-/* importação Google Font */
+/* ---------------importação Google Font--------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 body{
@@ -20,7 +19,20 @@ body{
 /* Layout ------------------------------------------------*/
 .Container {
     margin: 0 auto;
-    background-color: #ff0;
+    background-color: #dcdcdc;
+}
+
+.Flex{
+    display:flex;
+    justify-content: space-between;
+    background-color: #a9a9a9;
+}
+
+/* topo do site -------------------------------------*/
+#topo{ 
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
 }
 
 /* Técnica para organizar o renderizamento nos navegadores */
@@ -28,6 +40,16 @@ body{
     margin: 0;
     border: 0;
     padding: 0;
+}
+
+/* Cabeçalho --------------------------------- */
+header{
+    height: 60px;
+}
+
+#logo img{
+    width: 128px;
+    height: 128px;
 }
 
 /*  Smartfone Portrait -------------------- */
@@ -78,5 +100,16 @@ body{
     .Container {
         max-width: 1140px;
     }
+}
+
+/* Cabeçalho */
+header{
+    height: 120px;
+}
+#logo img{
+    width: 189px;
+    height: 189px;
+    margin-top: 30px;
+    
 }
 

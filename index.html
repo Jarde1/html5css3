@@ -1,8 +1,8 @@
-
 <!-- digitando: "!"/ENTER... gera o documento  -->
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,13 +15,27 @@
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- teclas ctrl K + ctrl C: cria comentarios -->
     <!-- cabeçalho -->
-    <header>
-        <!-- atalho "div.Container" - enter - -->
-        <div class="Container">
+    <header id="inicio">
+        
+        <div class="Container Flex"> <!-- atalho "div.Container" - enter - -->
+            <div id="logo">
+                <img src="img/favicon.png" alt="hal 9000">
+            </div>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check">&#x268c;</label>
+                <ul> <!-- atalho: "ul>li*4>a" -enter- gera (ul/li) abaixo-->
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#conteudo">Conteudo</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
 
+            </nav>
         </div>
 
     </header>
@@ -32,14 +46,14 @@
             <h1>HTML5 e CSS3 </h1>
             <h2> Você faz, você vê você naprende </h2>
         </div>
-       
+
     </main>
     <!-- Sobre -->
-    <section>
+    <section id="sobre">
         <div class="Container">
             <h2>Aprender na prática</h2>
         </div>
-        
+
     </section>
 
     <!-- One page -->
@@ -47,34 +61,37 @@
         <div class="Container">
             <h2> One Page Site </h2>
         </div>
-        
+
     </section>
-    
+
     <!-- Wireframe -->
     <section>
         <div class="Container">
             <h2> Wireframe </h2>
         </div>
-    
+
     </section>
 
     <!-- conteúdo -->
-    <section>
+    <section id="conteudo">
         <div class="Container">
             <h2> CONTEÚDO </h2>
             <h3> HTML5 </h3>
             <h3> BOX MODEL </h3>
             <H3> BREAKPOINTS</H3>
         </div>
-        
+
     </section>
 
     <!-- rodapé -->
-    <footer>
+    <footer id="contato">
         <div class="Container">
-            
+
         </div>
     </footer>
-
+<a href="#inicio" id="topo"><img src="img/topo.png" alt="topo do site"></a>
 </body>
+
 </html>
+
+<!-- atalho para ativa o "console do sistema"(CTRL + SHIFT + P)"live server stop live server open" para iniciar o live server -->
