@@ -11,6 +11,15 @@
 /* ---------------importação Google Font--------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* organiza o renderizamento nos navegadores */
+/* CSS Reset */
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+
 body{
     font-family: 'open Sans', sans-serif;
     font-size: 1em;
@@ -19,13 +28,13 @@ body{
 /* Layout ------------------------------------------------*/
 .Container {
     margin: 0 auto;
-    background-color: #dcdcdc;
+  
 }
 
 .Flex{
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    background-color: #a9a9a9;
+    
 }
 
 /* topo do site -------------------------------------*/
@@ -35,14 +44,10 @@ body{
     bottom: 10px;
 }
 
-/* Técnica para organizar o renderizamento nos navegadores */
-*{
-    margin: 0;
-    border: 0;
-    padding: 0;
-}
 
-/* Cabeçalho --------------------------------- */
+
+/*  Smartfone Portrait -------------------- */
+/* Cabeçalho  */
 header{
     height: 60px;
 }
@@ -52,18 +57,48 @@ header{
     height: 128px;
 }
 
-/*  Smartfone Portrait -------------------- */
-@media (min-width: 540px){
+#check{
+    display: none;
+}
+
+label{
+    font-size: 3em;
+    padding-right: 60px;
+}
+
+nav ul{
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#check:checked ~ ul {
+    right: 0;
+}
+
+nav ul li{
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*@media(min-width: 540px){
     body{
         background-color: #ebecf6;
     }
 }
-
+*/
 /*  Smartfone Landscape ------------------- */
-@media (min-width: 576px){
-    body{
-        background-color: aqua;
-    }
+@media(min-width: 576px){
     /* Layout --*/
     .Container {
         max-width: 540px;
@@ -71,9 +106,6 @@ header{
 }
 /* Tablet Portrait ----------------------- */
 @media(min-width: 768px){
-    body{
-        background-color: #ff0;
-    }
     /* Layout --*/
     .Container {
         max-width: 720px;
@@ -81,10 +113,7 @@ header{
 }
 
 /* Tablet Landscape ---------------------- */
-@media (min-width: 992px){
-   body{
-        background-color: #f60;
-   }
+@media(min-width: 992px){
    /* Layout --*/
     .Container {
        max-width: 960px;
@@ -92,24 +121,44 @@ header{
 }
 
 /* PC ------------------------------------ */
-@media (min-width: 1200px){
-   body{
-        background-color: #ff0000;
-   }
-   /* Layout ------------------------------------------------*/
+@media(min-width: 1200px){
     .Container {
         max-width: 1140px;
     }
+    /* Cabeçalho */
+    header{
+        height: 120px;
+    }
+
+    #logo img{
+        width: 189px;
+        height: 189px;
+        margin-top: 30px;
+        
+    }
+    label{
+        display: none;
+    }
+
+    nav ul{
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 50px;
+    }
+    nav ul li{
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a{
+        color: #343538;
+    }
+
+    nav ul li a:hover{
+        color: #c00000;
+    }
 }
 
-/* Cabeçalho */
-header{
-    height: 120px;
-}
-#logo img{
-    width: 189px;
-    height: 189px;
-    margin-top: 30px;
-    
-}
+
 
