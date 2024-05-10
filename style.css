@@ -32,6 +32,14 @@ body{
     justify-content: space-between;
     
 }
+.Flex2{
+    display: flex;
+    align-items: center;
+}
+.Flex3{
+    display: flex;
+    flex-direction: column;
+}
 
 .Botao{
     text-decoration: none;
@@ -70,7 +78,10 @@ header{
 
 label{
     font-size: 3em;
-    padding-right: 60px;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0,0,0,0.5);
 }
 
 nav ul{
@@ -102,6 +113,7 @@ main{
     height: 75vh;
     background: url(img/banner.jpg);
     background-size: cover;
+    background-position: center;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -117,6 +129,52 @@ main h2{
     font-size: 1em;
     margin: 20px 0px 50px 0px;
 }
+/* Sobre */
+#sobre{
+    padding: 50px 0px;
+    background: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+#destaqueSobre{
+    display: none;
+}
+#textoSobre{
+    color: #fff;
+    padding: 0px 10px;
+}
+#textoSobre h2{
+    margin-bottom: 10px;
+}
+
+.TopicosSobre{
+    /* cria espaço entre as tres divs  */
+    margin-top: 20px; 
+}
+
+.TopicosSobre img{
+    margin-right: 10px;
+}
+/* One Page */
+#onepage{
+    padding: 50px 10px;
+}
+#onepage h2{
+    margin-top: 10px;
+}
+#onepage p{
+    margin-bottom: 25px;
+}
+
+#video iframe{
+    /* 340px é uma dimenção padrão de segurança para videos um cel portrait */
+    width: 340px;
+    /* dimenções calculadas no site: digitalrebellion.com */
+    height: 191px;
+    /* devido o atributo iframe/frameborder etá obsoleto, o mesmo foi apgado e corrigido via css */
+    border: 0;
+}
+
 /*@media(min-width: 540px){
     body{
         background-color: #ebecf6;
@@ -129,9 +187,18 @@ main h2{
     .Container {
         max-width: 540px;
     }
+
     /* Destaque */
     main h1, main h2{
         text-shadow: #000 0.05em 0.05em 0.05em;
+    }
+
+    /* One Page */
+    #video iframe{
+        /* 340px é uma dimenção padrão de segurança para videos um cel portrait */
+        width: 560px;
+        /* dimenções calculadas no site: digitalrebellion.com */
+        height: 315px;
     }
 }
 /* Tablet Portrait ----------------------- */
@@ -201,6 +268,25 @@ main h2{
 
     nav ul li a:hover{
         color: #c00000;
+    }
+    /* Sobre */
+    #sobre{
+        /* fixa o background (imagem) ao fundo em relação a rolagem da pagina */
+        background-attachment: fixed;
+    }
+
+    #destaqueSobre{
+        display: inline;
+    }
+    #destaqueSobre img{
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+
+    /* One Page */
+    .Flex3{
+        flex-direction: row;
+        align-items: center;
     }
 }
 
