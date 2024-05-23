@@ -41,6 +41,21 @@ body{
     flex-direction: column;
 }
 
+.Flex4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Flex5{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.Flex6 {
+    display: flex;
+}
+
 .Botao{
     text-decoration: none;
     color: #fff;
@@ -52,14 +67,40 @@ body{
     border-radius: 25px;
 }
 
-/* topo do site -------------------------------------*/
+/* topo do site */
 #topo{ 
     position: fixed;
     right: 10px;
     bottom: 10px;
 }
+/* Cartões */
+.Card {
+    margin-top: 25px;
+    width: 338px;
+    height: 520px;
+    background-color: #e8e8e8;
+    border: 1px solid #a1a1a1;
+    border-radius: 25px;
+    text-align: center;
+}
 
+.Card img{
+    border-radius: 25px 25px 0px 0px;
+}
 
+.Card h3{
+    margin-top: 15px;
+}
+
+.Card p{
+    text-align: left;
+    color: #434343;
+    padding: 10px 30px 50px 30px;
+}
+.Card a {
+    padding: 10px 100px;
+    border: 0;
+}
 
 /*  Smartfone Portrait -------------------- */
 /* Cabeçalho  */
@@ -174,6 +215,87 @@ main h2{
     /* devido o atributo iframe/frameborder etá obsoleto, o mesmo foi apgado e corrigido via css */
     border: 0;
 }
+/* Wireframe */
+#wireframe{
+    padding: 50px 0px;
+    background: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+#textoWire{
+    color: #fff;
+    padding: 0px 10px;
+}
+#textoWire h2{
+    margin-bottom: 10px;
+}
+#textoWire p{
+    margin-bottom: 40px;
+}
+#textWire span{
+    display: none;
+}
+#qrcode{
+    /* Esconde o QR Code em Smartfone modo portrait */
+    display: none;
+}
+/* Conteudo */
+#conteudo{
+    padding: 50px 0px;
+}
+#conteudo h2{
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#todos{
+    margin-top: 50px;
+    text-align: center;
+}
+#todos a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.25em;
+}
+
+/* Rodapé */
+address {
+    padding: 35px 10px 50px 10px;
+    background: url(img/background2.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+address a {
+    text-decoration: none;
+    color: #fff;
+}
+
+address img {
+    padding-top: 15px;
+}
+
+#iconeLocal {
+    display: none;
+}
+#dados {
+    margin: 30px 0px 15px 0px;
+}
+#googleMaps{
+    display: none;
+}
+
+footer {
+    padding: 50px;
+    background-color: #343538;
+    color: #fff;
+    text-align: center;
+}
+#social{
+    margin-bottom: 25px;
+}
 
 /*@media(min-width: 540px){
     body{
@@ -181,6 +303,7 @@ main h2{
     }
 }
 */
+
 /*  Smartfone Landscape ------------------- */
 @media(min-width: 576px){
     /* Layout --*/
@@ -200,7 +323,18 @@ main h2{
         /* dimenções calculadas no site: digitalrebellion.com */
         height: 315px;
     }
+    /* Rodapé */
+    .Flex5 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #social {
+        margin: 0;
+    }
 }
+
 /* Tablet Portrait ----------------------- */
 @media(min-width: 768px){
     /* Layout --*/
@@ -287,6 +421,30 @@ main h2{
     .Flex3{
         flex-direction: row;
         align-items: center;
+    }
+    /* Wireframe */
+    #wireframe{
+        background-attachment: fixed;
+    }
+    #wireframe span{
+        display: inline;
+    }
+    #qrcode{
+        display: inline;
+    }
+    #qrcode img{
+        width: 225px;
+        height: 225px;
+    }
+    /* Rodapé */
+    #iconeLocal {
+        display: inline;
+    }
+    #iconeMapa {
+        display: none;
+    }
+    #googleMaps {
+        display: inline;
     }
 }
 
